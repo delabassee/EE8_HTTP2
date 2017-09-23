@@ -1,0 +1,182 @@
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.clock {
+    color: #fff;
+    font-weight:300;
+    font-size: 3em;
+    text-align: center;
+    position: absolute;
+    align-content: center;
+    left: 300px;
+    top: 430px;
+    padding-top: 2px;
+    padding-bottom: 2px; 
+    padding-left: 8px; 
+    padding-right: 8px;
+    background-color: rgba(9, 9, 9, 0.6);  
+    border-radius: 8px;
+    display: none;
+}
+
+
+#result {
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Shrink */
+.hvr-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(2.1);
+    transform: scale(2.1);
+}
+
+
+/*img:active {
+    -webkit-transform: scale (2x);  
+}
+
+.image img {
+    -webkit-transition: all .5s ease; 
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}*/
+
+ /* //.image:hover img { */
+.grid img {
+    -webkit-transform:scale(.98);
+    -moz-transform:scale(.98);
+    -ms-transform:scale(.98);
+    -o-transform:scale(.98);
+    transform:scale(.98);
+}
+
+.pix:active img {
+    -webkit-transform:scale(5);
+    -moz-transform:scale(5);
+    -ms-transform:scale(5);
+    -o-transform:scale(5);
+    transform:scale(5);
+    /* opacity: 0.5; */
+    /* border: #ff0 inset .8px; */
+    /* transition: -webkit-transform .1s ease; issue on safari */
+    
+}
+
+
+.ghost {
+    display: none;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
